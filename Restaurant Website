@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gourmet Haven</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fefefe;
+      color: #333;
+    }
+
+    header {
+      background: url('https://images.unsplash.com/photo-1541544181054-219d636efedd') no-repeat center center/cover;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 5px black;
+    }
+
+    header h1 {
+      font-size: 3em;
+    }
+
+    nav {
+      background-color: #222;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff6347;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    /* Menu Table */
+    .menu-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .menu-table th, .menu-table td {
+      padding: 15px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .menu-table th {
+      background-color: #ff6347;
+      color: white;
+    }
+
+    .menu-table tr:hover {
+      background-color: #f9f9f9;
+    }
+
+    .badge {
+      background: #ff6347;
+      color: white;
+      padding: 2px 10px;
+      font-size: 0.8em;
+      border-radius: 5px;
+      margin-left: 5px;
+    }
+
+    /* Specials */
+    .specials {
+      list-style: square;
+      padding-left: 20px;
+    }
+
+    /* Gallery */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .gallery img {
+      width: 30%;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Video */
+    .video-container {
+      margin-top: 30px;
+    }
+
+    .video-container iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    /* Contact Form */
+    .contact-form {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    .contact-form button {
+      margin-top: 15px;
+      background-color: #ff6347;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1em;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #e74c3c;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      .gallery img {
+        width: 45%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery img {
+        width: 100%;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🍽 Gourmet Haven</h1>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#menu">Menu</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact Us</a>
+  </nav>
+
+  <section id="menu">
+    <h2>Our Menu</h2>
+    <table class="menu-table">
+      <tr>
+        <th>Item</th>
+        <th>Description</th>
+        <th>Price</th>
+      </tr>
+      <tr>
+        <td>Margherita Pizza <span class="badge">New</span></td>
+        <td>Classic tomato, basil & mozzarella</td>
+        <td>$10.99</td>
+      </tr>
+      <tr>
+        <td>Spaghetti Carbonara</td>
+        <td>Rich creamy sauce with pancetta</td>
+        <td>$12.50</td>
+      </tr>
+      <tr>
+        <td>Truffle Fries <span class="badge">Special</span></td>
+        <td>Crispy fries tossed in truffle oil</td>
+        <td>$7.00</td>
+      </tr>
+    </table>
+
+    <h3>Chef's Recommendations</h3>
+    <ul class="specials">
+      <li>🧀 Four-Cheese Pasta</li>
+      <li>🥩 Grilled Ribeye Steak</li>
+      <li>🍤 Garlic Butter Prawns</li>
+    </ul>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt="Dish 1">
+      <img src="https://images.unsplash.com/photo-1606755962773-72d4a1cfc2d4" alt="Dish 2">
+      <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38" alt="Dish 3">
+    </div>
+  </section>
+
+  <section class="video-container">
+    <h2>🎥 Inside Our Kitchen</h2>
+    <iframe src="https://www.youtube.com/embed/d6DCeZ0UNsQ" title="Cooking Video"></iframe>
+  </section>
+
+  <section id="contact">
+    <h2>Book a Table</h2>
+    <div class="contact-form">
+      <form>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" required>
+
+        <label for="date">Reservation Date:</label>
+        <input type="date" id="date" required>
+
+        <label for="people">Number of People:</label>
+        <input type="number" id="people" min="1" required>
+
+        <label for="message">Additional Requests:</label>
+        <textarea id="message" rows="4"></textarea>
+
+        <button type="submit">Reserve Now</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Gourmet Haven | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
