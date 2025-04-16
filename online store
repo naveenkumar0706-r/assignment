@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Stylish Online Store</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background: #f9f9f9;
+            color: #333;
+        }
+
+        nav {
+            background-color: #4CAF50;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            margin-top: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        h1, h2, h3 {
+            color: #4CAF50;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        form input, form select, form button {
+            padding: 10px;
+            margin: 8px 0;
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        form button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        form button:hover {
+            background-color: #45a049;
+        }
+
+        audio, video {
+            margin-top: 10px;
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #eee;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#order">Order Form</a>
+        <a href="#gallery">Gallery</a>
+    </nav>
+
+    <section id="home">
+        <h1>Welcome to My Stylish Online Store</h1>
+        <p><strong>🎉 Big Sale Alert!</strong> <em>Enjoy up to <span style="color:red;">50% OFF</span> on selected items this season.</em></p>
+        <p>Explore our <a href="#products">Products</a>, place your order using the <a href="#order">Order Form</a>, and experience more in the <a href="#gallery">Gallery</a>.</p>
+    </section>
+
+    <section id="products">
+        <h2>🛍️ Our Products</h2>
+        <table>
+            <tr>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Wireless Headphones</td>
+                <td>$49.99</td>
+                <td><strong>20% OFF</strong> - High-quality sound and comfort</td>
+            </tr>
+            <tr>
+                <td>Smart Watch</td>
+                <td>$79.99</td>
+                <td>Track your fitness and stay connected</td>
+            </tr>
+            <tr>
+                <td>Bluetooth Speaker</td>
+                <td>$29.99</td>
+                <td><em>Best Seller</em> - Portable and powerful</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="order">
+        <h2>📝 Place Your Order</h2>
+        <form action="#" method="post">
+            <label>Name:
+                <input type="text" name="name" placeholder="Your Full Name" required>
+            </label>
+            <label>Email:
+                <input type="email" name="email" placeholder="you@example.com" required>
+            </label>
+            <label>Product:
+                <input type="text" name="product" placeholder="e.g. Wireless Headphones" required>
+            </label>
+            <label>Quantity:
+                <input type="number" name="quantity" min="1" value="1" required>
+            </label>
+            <label>Payment Method:
+                <select name="payment" required>
+                    <option value="">-- Select Payment Method --</option>
+                    <option value="card">Credit/Debit Card</option>
+                    <option value="cash">Cash on Delivery</option>
+                </select>
+            </label>
+            <label>
+                <input type="checkbox" name="agree" required> I agree to the store policies
+            </label>
+            <button type="submit">Submit Order</button>
+        </form>
+    </section>
+
+    <section id="gallery">
+        <h2>📸 Gallery</h2>
+
+        <h3>🎧 Promotional Audio</h3>
+        <audio controls>
+            <source src="promo.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <h3>📹 Product Demo Video</h3>
+        <video controls>
+            <source src="product-demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <footer>
+        &copy; 2025 My Stylish Online Store. All rights reserved.
+    </footer>
+
+</body>
+</html>
