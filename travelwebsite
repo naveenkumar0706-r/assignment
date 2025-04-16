@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>WanderWorld Travel Blog 🌍</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+    }
+    nav {
+      background: #333;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+    nav a {
+      color: white;
+      margin-right: 15px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      display: none;
+    }
+    section.active {
+      display: block;
+    }
+    table, th, td {
+      border: 1px solid #444;
+      border-collapse: collapse;
+      padding: 8px;
+    }
+    audio, video {
+      margin-top: 15px;
+    }
+    form label {
+      display: block;
+      margin-top: 10px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    .destination-img {
+      width: 200px;
+      height: 120px;
+      object-fit: cover;
+      margin: 10px 10px 10px 0;
+      border: 1px solid #ccc;
+    }
+    .destination-list {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+  </style>
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => section.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+
+    window.onload = function () {
+      showSection('home');
+    };
+  </script>
+</head>
+<body>
+
+  <nav>
+    <a href="#" onclick="showSection('home')">🏠 Home</a>
+    <a href="#" onclick="showSection('destinations')">🗺 Destinations</a>
+    <a href="#" onclick="showSection('itinerary')">📆 Itinerary</a>
+    <a href="#" onclick="showSection('contact')">📬 Contact</a>
+    <a href="#" onclick="showSection('media')">🎧 Media</a>
+  </nav>
+
+  <!-- Home Page -->
+  <section id="home">
+    <h1>Welcome to <i>WanderWorld</i> Travel Blog 🌍</h1>
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Travel Banner" />
+    <p>
+      Discover the beauty of <b>Adventure</b>, embrace <i>Culture</i>, and reconnect with <u>Nature</u> around the world.
+      This blog shares personal travel stories, guides, and multimedia from unforgettable journeys.
+    </p>
+  </section>
+
+  <!-- Destinations Page -->
+  <section id="destinations">
+    <h2>🌐 Favorite Destinations</h2>
+
+    <div class="destination-list">
+      <div>
+        <img src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c" class="destination-img" alt="Japan">
+        <p><a href="https://www.japan.travel/en/" target="_blank">Japan</a></p>
+      </div>
+      <div>
+        <img src="https://images.unsplash.com/photo-1580674283306-c7f93c067b2f" class="destination-img" alt="Norway">
+        <p><a href="https://www.visitnorway.com/" target="_blank">Norway</a></p>
+      </div>
+      <div>
+        <img src="https://images.unsplash.com/photo-1589880943731-b5f36c7b6eb3" class="destination-img" alt="Australia">
+        <p><a href="https://www.australia.com/" target="_blank">Australia</a></p>
+      </div>
+    </div>
+
+    <h3>🌟 European Picks</h3>
+    <ol>
+      <li><a href="https://www.france.fr/en" target="_blank">France</a></li>
+      <li><a href="https://www.italia.it/en" target="_blank">Italy</a></li>
+      <li><a href="https://www.iceland.is/" target="_blank">Iceland</a></li>
+    </ol>
+  </section>
+
+  <!-- Itinerary Page -->
+  <section id="itinerary">
+    <h2>✈ My Europe Itinerary</h2>
+    <img src="https://images.unsplash.com/photo-1549921296-3a6b8f4d92de" alt="Europe Map" />
+    <table>
+      <tr>
+        <th>Day</th>
+        <th>Destination</th>
+        <th>Activities</th>
+        <th>Notes</th>
+      </tr>
+      <tr>
+        <td rowspan="2">1</td>
+        <td>Paris</td>
+        <td>Eiffel Tower, River Cruise</td>
+        <td>Stay near Champs-Élysées</td>
+      </tr>
+      <tr>
+        <td>Paris</td>
+        <td>Louvre, Street Cafe Tour</td>
+        <td>Evening train to Lyon</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td colspan="2">Lyon Exploration</td>
+        <td>Local food tasting</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Geneva</td>
+        <td>Lake Geneva Walk, UN Tour</td>
+        <td>Day trip only</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Contact Page -->
+  <section id="contact">
+    <h2>📬 Contact the Blogger</h2>
+    <form>
+      <label>Name:</label>
+      <input type="text" required />
+
+      <label>Email:</label>
+      <input type="email" required />
+
+      <label>Message:</label>
+      <textarea rows="4" cols="30"></textarea>
+
+      <label>Reason for Contact:</label>
+      <select>
+        <option>Inquiry</option>
+        <option>Collaboration</option>
+        <option>Feedback</option>
+      </select>
+
+      <label><input type="checkbox" /> Subscribe to newsletter</label><br><br>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Media Page -->
+  <section id="media">
+    <h2>🎧 Travel Media Highlights</h2>
+
+    <p><b>Moroccan Soundscapes:</b></p>
+    <audio controls>
+      <source src="travel_music.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <p><b>Icelandic Adventure Video:</b></p>
+    <video width="640" height="360" controls poster="video_poster.jpg">
+      <source src="travel_video.mp4" type="video/mp4">
+      Your browser does not support the video element.
+    </video>
+  </section>
+
+</body>
+</html>
